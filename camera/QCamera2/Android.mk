@@ -97,7 +97,7 @@ LOCAL_C_INCLUDES := \
 
 #HAL 1.0 Include paths
 LOCAL_C_INCLUDES += \
-        $(LOCAL_PATH)//HAL
+        $(LOCAL_PATH)/HAL
 
 ifeq ($(TARGET_COMPILE_WITH_MSM_KERNEL),true)
 LOCAL_HEADER_LIBRARIES := generated_kernel_headers
