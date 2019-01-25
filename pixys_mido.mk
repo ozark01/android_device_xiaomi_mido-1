@@ -21,15 +21,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mido device
 $(call inherit-product, device/xiaomi/mido/device.mk)
 
-# Inherit some common AEX stuff.
-$(call inherit-product, vendor/syberia/common.mk)
-
-#Boot Animation res
+# Inherit some common PixysOS stuff.
+$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
-PRODUCT_NAME := syberia_mido
+PRODUCT_NAME := pixys_mido
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 4
 PRODUCT_MANUFACTURER := Xiaomi
@@ -40,9 +39,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="mido-user 7.0 NRD90M V9.6.1.0.NCFMIFD release-keys"
-
-# Build Type
-SYBERIA_BUILD_TYPE := OFFICIAL
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "xiaomi/mido/mido:7.0/NRD90M/V9.6.1.0.NCFMIFD:user/release-keys"
