@@ -439,5 +439,7 @@
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
 
     <bool name="config_oldQtiTelephony">false</bool>
+    <!-- Alternate ambient display-->
+    <bool name="config_alt_ambient_display">true</bool>
 </resources>
 
